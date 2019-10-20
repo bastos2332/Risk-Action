@@ -13,10 +13,10 @@ span.dangerNomeProjeto {
     font-family: font-danger;
 }
 .text-project {
-    color: #9d27b0;
+    color: #004eff;
 }
 .bg-project {
-    background-color: #9d27b0!important;
+    background-color: #004eff!important;
 }
 .border-left-project {
     border-left: .25rem solid #9d27b0!important;;

@@ -22,14 +22,14 @@
         <div id="wrapper">
 
             <!-- Sidebar -->
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul class="navbar-nav bg-project sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                     <div class="sidebar-brand-icon">
-                        <img src="img/ico-logo.svg" alt="" style="width:40px; height: 40px;">
+                        <img src="img/ico-logo.png" alt="" style="width:40px; height: 40px;">
                     </div>
-                    <div class="sidebar-brand-text mx-3"><span class="text-danger dangerNomeProjeto">Dan</span>ear</div>
+                    <div class="sidebar-brand-text mx-3"><span class="text-light">Sara</div>
                 </a>
 
                 <!-- Divider -->
@@ -56,9 +56,6 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <a class="collapse-item" data-toggle="modal" data-target="#modalExemplo"><i style="color: gray; margin-left:5px;"class="fas fa-fw fa-exclamation-triangle" ></i> Acionar</a>
                             <br>
-                            <h6 class="collapse-header"><i style="color: gray; margin-left:5px;"class="fas fa-fw fa-users"></i>  Pessoas</h6>
-                            <a class="collapse-item" href="#"> <i style="color: gray; margin-left:5px;"class="fas fa-fw fa-user-tag"></i> Desaparecidas</a>
-                            <a class="collapse-item" href="#"><i style="color: gray; margin-left:5px;"class="fas fa-fw fa-user-check"></i> Encontradas</a>
                         </div>
                     </div>
                 </li>
@@ -112,8 +109,61 @@
                     </div>
                     </div>
                 </div>
-        
+        <!-- modal CRISE -->
+        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <div class="icon-circle mr-3">
+                                <img style="width: 40px; height: 40px;" src="img/mosquito.png" alt="Alternate Text" />
+                        </div>
+                    <div>
+                                            
+                        <span class="font-weight-bold">Epidemia de dengue.</span><br>
+                        <span class="font-weight-bold">Local: São Paulo</span><br>
+                        <span>Data: 10/10/2019</span>
+                    </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
 
+                            <div class="col-12">
+                                <center>
+                                        <a class="btn btn-primary" style="color: black;width: 155px;" onclick="FecharModal();"> 
+                                                <i class="fas fa-hands-helping"></i>Me Engajar
+                                              </a>
+  
+                                              <a class="btn btn-primary" style="color: black;width: 155px;" onclick="FecharModal();">  
+                                                   <i class="fas fa-plus"></i>
+                                                    Ocorrência
+                                      </a>
+
+                                </center>
+                                    
+                            </div>
+                            <br>
+                            <div class="col-12">       
+                                    <center>
+                                            <a class="btn btn-primary" style="color: black;width: 155px;" onclick="FecharModal();"> 
+                                                   <i class="fas fa-user-check"></i>
+                                                    Encontrados
+                                                </a>
+                                                <a class="btn btn-primary" style="color: black;width: 155px;" onclick="FecharModal();"> 
+                                                        <i class="fas fa-user-tag"></i>
+                                                        Desaparecidos
+                                                    </a>
+
+                                           
+
+                                    </center>
+                            </div>
+                   
+                </div>
+            </div>
+            </div>
+        </div>
                
 
                 <!-- Divider -->
@@ -206,7 +256,7 @@
                                 <!-- Dropdown - Alerts -->
                                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                     <h6 class="dropdown-header" style="background-color: red">Crises acionadas</h6>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <a class="dropdown-item d-flex align-items-center" href="#"  data-toggle="modal" data-target="#modal2">
                                         <div class="mr-3">
                                             <div class="icon-circle">
                                                     <img style="width: 40px; height: 40px;" src="img/mosquito.png" alt="Alternate Text" />
@@ -242,7 +292,7 @@
                                             <div class="status-indicator bg-success"></div>
                                         </div>
                                         <div class="font-weight-bold">
-                                            <div class="text-truncate">Autruísmo</div>
+                                            <div class="text-truncate">Altruísmo</div>
                                             <div class="small text-gray-500">2 Madalhas</div>
                                         </div>
                                     </a>
@@ -262,7 +312,7 @@
                                             <div class="status-indicator bg-warning"></div>
                                         </div>
                                         <div>
-                                            <div class="text-truncate">Abinegacação</div>
+                                            <div class="text-truncate">Abnegagação</div>
                                             <div class="small text-gray-500">3 Medalhas</div>
                                         </div>
                                     </a>
@@ -623,11 +673,11 @@
   }
 }
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-            'Error: The Geolocation service failed.' :
-            'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
+        // infoWindow.setPosition(pos);
+        // infoWindow.setContent(browserHasGeolocation ?
+        //     'Error: The Geolocation service failed.' :
+        //     'Error: Your browser doesn\'t support geolocation.');
+        // infoWindow.open(map);
     }
 </script>
 <script async defer
@@ -837,10 +887,11 @@
         )
     }
 
+    
     var variavel = queryString("tipo");
-       
-
-</script>
+    
+    
+    </script>
 
 
 <script src="JS/jquery.min.js"></script>
@@ -850,4 +901,10 @@
 <script src="JS/Chart.min.js"></script>
 <script src="JS/chart-area-demo.js"></script>
 <script src="JS/chart-pie-demo.js"></script>
+<script>
+
+    function FecharModal() {
+        // $('#modal2').hide();
+    }
+</script>
 </html>

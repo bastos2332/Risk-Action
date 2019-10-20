@@ -7,7 +7,7 @@ span.span-nomeFator {
 }
 @font-face {
     font-family: font-danger;
-    src: url(fonts/danger.otf);
+    src: url(../fonts/danger.otf);
 } 
 span.dangerNomeProjeto {
     font-family: font-danger;

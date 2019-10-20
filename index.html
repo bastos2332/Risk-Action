@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head >
     <title>RISK ACTION</title>
 
     <meta charset="utf-8" />
@@ -15,29 +15,21 @@
     <link href="CSS/all.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <link href="CSS/sb-admin-2.min.css" rel="stylesheet" />
-    <style>
-
-    span.badgeNASA {
-        width: 50px;
-    }
-    span.span-nomeFator {
-        font-size: 13px;
-    }
-    </style>
+   <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
+<body id="page-top">
     <form id="form1" runat="server">
         <div id="wrapper">
 
             <!-- Sidebar -->
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul class="navbar-nav bg-project sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                     <div class="sidebar-brand-icon">
-                        <img src="img/sos.png" alt="" style="width:40px; height: 40px;">
+                        <img src="img/ico-logo.svg" alt="" style="width:40px; height: 40px;">
                     </div>
-                    <div class="sidebar-brand-text mx-3">RiskAction</div>
+                    <div class="sidebar-brand-text mx-3"><span class="text-danger dangerNomeProjeto">Dan</span>ear</div>
                 </a>
 
                 <!-- Divider -->
@@ -45,7 +37,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link text-warning" href="index.html">
                         <i class="fas fa-fw fa-exclamation-circle"></i>
                         <span>Riscos Iminentes</span></a>
                 </li>
@@ -97,7 +89,7 @@
 
                 <!-- Sidebar Toggler (Sidebar) -->
                 <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                    <button class="rounded-circle border-0 bg-secondary" id="sidebarToggle" type="button"></button>
                 </div>
 
             </ul>
@@ -110,7 +102,7 @@
                 <div id="content">
 
                     <!-- Topbar -->
-                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <nav class="navbar navbar-expand navbar-light bg-light topbar mb-4 static-top shadow">
 
                         <!-- Sidebar Toggle (Topbar) -->
                         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -244,7 +236,7 @@
                             <!-- Nav Item - User Information -->
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Kézia Gomes</span>
+                                    <span class="mr-2 d-none d-lg-inline text-project small">Kézia Gomes</span>
                                     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                                 </a>
                                 <!-- Dropdown - User Information -->
@@ -276,18 +268,18 @@
 
                         <!-- Page Heading -->
                         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 class="h3 mb-0 text-gray-800">Riscos Ambientais</h1>
-                            <a href="#" class="d-sm-inline-block btn btn-lg btn-danger shadow-sm">&nbsp;&nbsp;<i class="fas fa-exclamation-triangle"></i>&nbsp;&nbsp;</a>
+                            <h1 class="h3 mb-0 text-project">Riscos Ambientais</h1>
+
                         </div>
 
                         <!-- Content Row -->
                         <div class="row">
                             <div class='col-md-3 mb-4'>
-                                <div class='card border-left-info shadow h-100 py-2'>
+                                <div class='card border-left-project shadow h-100 py-2'>
                                     <div class='card-body'>
                                         <div class='row no-gutters align-items-center'>
                                             <div class='col mr-2'>
-                                                <div class='text-xs font-weight-bold text-info text-uppercase mb-1' onclick="ExibirListagem('ENCHENTE');" style="cursor: pointer;">Alagamento</div>
+                                                <div class='text-xs font-weight-bold text-project text-uppercase mb-1' onclick="ExibirListagem('ENCHENTE');" style="cursor: pointer;">Alagamento</div>
                                                 <div class='row no-gutters align-items-center'>
                                                     <div class='col-auto'>
                                                         <div class='h5 mb-0 mr-3 font-weight-bold text-gray-800'>10%</div>
@@ -308,11 +300,11 @@
 
                             </div>
                             <div class='col-md-3 mb-4'>
-                                <div class='card border-left-info shadow h-100 py-2'>
+                                <div class='card border-left-project shadow h-100 py-2'>
                                     <div class='card-body'>
                                         <div class='row no-gutters align-items-center'>
                                             <div class='col mr-2'>
-                                                <div class='text-xs font-weight-bold text-info text-uppercase mb-1' onclick="ExibirListagem('EPIDEMIA');" style="cursor: pointer;">Epidemia de Dengue</div>
+                                                <div class='text-xs font-weight-bold text-project text-uppercase mb-1' onclick="ExibirListagem('EPIDEMIA');" style="cursor: pointer;">Epidemia de Dengue</div>
                                                 <div class='row no-gutters align-items-center'>
                                                     <div class='col-auto'>
                                                         <div class='h5 mb-0 mr-3 font-weight-bold text-gray-800'>30%</div>
@@ -333,18 +325,18 @@
 
                             </div>
                             <div class='col-md-3 mb-4'>
-                                <div class='card border-left-info shadow h-100 py-2'>
+                                <div class='card border-left-project shadow h-100 py-2'>
                                     <div class='card-body'>
                                         <div class='row no-gutters align-items-center'>
                                             <div class='col mr-2'>
-                                                <div class='text-xs font-weight-bold text-info text-uppercase mb-1' onclick="ExibirListagem('QUEIMADA');" style="cursor: pointer;">Queimadas</div>
+                                                <div class='text-xs font-weight-bold text-project text-uppercase mb-1' onclick="ExibirListagem('QUEIMADA');" style="cursor: pointer;">Queimadas</div>
                                                 <div class='row no-gutters align-items-center'>
                                                     <div class='col-auto'>
                                                         <div class='h5 mb-0 mr-3 font-weight-bold text-gray-800'>5%</div>
                                                     </div>
                                                     <div class='col'>
                                                         <div class='progress progress-sm mr-2'>
-                                                            <div class='progress-bar bg-sucess' role='progressbar' style='width: 5%' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100'></div>
+                                                            <div class='progress-bar bg-success' role='progressbar' style='width: 5%' aria-valuenow='5' aria-valuemin='0' aria-valuemax='100'></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -359,11 +351,11 @@
                             </div>
 
                             <div class='col-md-3 mb-4'>
-                                <div class='card border-left-info shadow h-100 py-2'>
+                                <div class='card border-left-project shadow h-100 py-2'>
                                     <div class='card-body'>
                                         <div class='row no-gutters align-items-center'>
                                             <div class='col mr-2'>
-                                                <div class='text-xs font-weight-bold text-info text-uppercase mb-1' onclick="ExibirListagem('INSOLACAO');" style="cursor: pointer;">Insolação</div>
+                                                <div class='text-xs font-weight-bold text-project text-uppercase mb-1' onclick="ExibirListagem('INSOLACAO');" style="cursor: pointer;">Insolação</div>
                                                 <div class='row no-gutters align-items-center'>
                                                     <div class='col-auto'>
                                                         <div class='h5 mb-0 mr-3 font-weight-bold text-gray-800'>100%</div>
@@ -395,17 +387,23 @@
                                 <div class="card shadow mb-4">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Sua localização</h6>
+                                        <h6 class="m-0 font-weight-bold text-project">Sua localização - Cuiabá</h6>
                                         <div class="dropdown no-arrow">
                                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
+                                                <div class="dropdown-header">Demais Cidades</div>
                                                 <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Várzea Grande</a>
+                                                <a class="dropdown-item" href="#">Rondonópolis</a>
+                                                <a class="dropdown-item" href="#">Sinop</a>
+                                                <a class="dropdown-item" href="#">Tangará da Serra</a>
+                                                <a class="dropdown-item" href="#">Cáceres</a>
+                                                <a class="dropdown-item" href="#">Sorriso</a>
+                                                <a class="dropdown-item" href="#">Lucas do Rio Verde</a>
+                                                <a class="dropdown-item" href="#">Primavera do Leste</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
                                             </div>
                                         </div>
                                     </div>
@@ -422,7 +420,7 @@
                                 <div class="card shadow mb-4">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Dados</h6>
+                                        <h6 class="m-0 font-weight-bold text-project">Dados</h6>
                                         <div class="dropdown no-arrow">
                                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -524,19 +522,15 @@
 </body>
 
 <script>
-    GetCurrentLocation();
-
-    var map, infoWindow, marker;
-
+    var map, marker;
 
     function initMap() {
         console.log(google)
         map = new google.maps.Map(document.querySelector('.chart-area'), {
             center: { lat: -34.397, lng: 150.644 },
-            zoom: 6
+            zoom: 15
         });
-        infoWindow = new google.maps.InfoWindow;
-        marker = new google.maps.Marker;
+        // infoWindow = new google.maps.InfoWindow;
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
@@ -546,21 +540,36 @@
                     lng: position.coords.longitude
                 };
 
-                infoWindow.setPosition(pos);
-                infoWindow.setContent('Location found.');
-                infoWindow.open(map);
+                marker = new google.maps.Marker({
+                    map: map,
+                    center: pos,
+                    draggable: true,
+                    animation: google.maps.Animation.DROP,
+                    position: pos
+                });
+                marker.addListener('click', toggleBounce);
+
+                // infoWindow.setPosition(pos);
+                // infoWindow.setContent('Location found.');
+                // infoWindow.open(map);
                 marker.setPosition(pos);
                 marker.setMap(map);
                 map.setCenter(pos);
             }, function () {
-                handleLocationError(true, infoWindow, map.getCenter());
+                handleLocationError(true, null, map.getCenter());
             });
         } else {
             // Browser doesn't support Geolocation
-            handleLocationError(false, infoWindow, map.getCenter());
+            handleLocationError(false, null, map.getCenter());
         }
     }
-
+    function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
@@ -762,6 +771,26 @@
         }    
     }
 
+    function queryString(parameter) {  
+              var loc = location.search.substring(1, location.search.length);   
+              var param_value = false;   
+              var params = loc.split("&");   
+              for (i=0; i<params.length;i++) {   
+                  param_name = params[i].substring(0,params[i].indexOf('='));   
+                  if (param_name == parameter) {                                          
+                      param_value = params[i].substring(params[i].indexOf('=')+1)   
+                  }   
+              }   
+              if (param_value) {   
+                  return param_value;   
+              }   
+              else {   
+                  return undefined;   
+              }   
+    }
+
+    var variavel = queryString("tipo");
+    alert(variavel);    
 
 </script>
 

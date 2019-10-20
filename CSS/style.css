@@ -1,0 +1,26 @@
+
+span.badgeNASA {
+    width: 50px;
+}
+span.span-nomeFator {
+    font-size: 13px;
+}
+@font-face {
+    font-family: font-danger;
+    src: url(fonts/danger.otf);
+} 
+span.dangerNomeProjeto {
+    font-family: font-danger;
+}
+.text-project {
+    color: #9d27b0;
+}
+.bg-project {
+    background-color: #9d27b0!important;
+}
+.border-left-project {
+    border-left: .25rem solid #9d27b0!important;;
+}
+.bg-project-escuro {
+    background-color: #59355f;
+}
